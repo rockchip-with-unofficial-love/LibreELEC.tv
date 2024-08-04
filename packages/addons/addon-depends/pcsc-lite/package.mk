@@ -2,8 +2,8 @@
 # Copyright (C) 2016-present Team LibreELEC (https://libreelec.tv)
 
 PKG_NAME="pcsc-lite"
-PKG_VERSION="2.2.3"
-PKG_SHA256="cab1e62755713f62ce1b567954dbb0e9a7e668ffbc3bbad3ce85c53f8f4e00a4"
+PKG_VERSION="2.3.0"
+PKG_SHA256="1acca22d2891d43ffe6d782740d32e78150d4fcc99e8a3cc763abaf546060d3d"
 PKG_LICENSE="GPL"
 PKG_SITE="https://pcsclite.apdu.fr"
 PKG_URL="https://pcsclite.apdu.fr/files/pcsc-lite-${PKG_VERSION}.tar.xz"
