@@ -2,8 +2,8 @@
 # Copyright (C) 2023-present Team LibreELEC (https://libreelec.tv)
 
 PKG_NAME="dool"
-PKG_VERSION="1.3.2"
-PKG_SHA256="171afc1a43c82a592a3a07d48b62475aca22239dbe5c295d5903caadbe82ba51"
+PKG_VERSION="1.3.3"
+PKG_SHA256="d9059634e741cacf9a229366f9a48efc6b7fb84e929e3f6d8a6a1ede53249f2f"
 PKG_LICENSE="GPL-3.0-or-later"
 PKG_SITE="https://github.com/scottchiefbaker/dool"
 PKG_URL="https://github.com/scottchiefbaker/dool/archive/v${PKG_VERSION}.tar.gz"
