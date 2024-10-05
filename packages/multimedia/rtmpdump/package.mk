@@ -3,8 +3,8 @@
 # Copyright (C) 2020-present Team LibreELEC (https://libreelec.tv)
 
 PKG_NAME="rtmpdump"
-PKG_VERSION="f1b83c10d8beb43fcc70a6e88cf4325499f25857"
-PKG_SHA256="c68e05989a93c002e3ba8df3baef0021c17099aa2123a9c096a5cc8e029caf95"
+PKG_VERSION="6f6bb1353fc84f4cc37138baa99f586750028a01"
+PKG_SHA256="be2d9a4e0979509341a267d3bd44b303081f7916f2681bbc3f1b62cb44550218"
 PKG_LICENSE="GPL"
 PKG_SITE="http://rtmpdump.mplayerhq.hu/"
 PKG_URL="http://repo.or.cz/rtmpdump.git/snapshot/${PKG_VERSION}.tar.gz"
