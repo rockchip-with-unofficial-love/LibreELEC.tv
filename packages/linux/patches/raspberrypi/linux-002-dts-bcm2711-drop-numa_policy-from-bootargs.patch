@@ -1,0 +1,43 @@
+From 2d02a2c7531d2b7573237e0e7604b8d51c26583b Mon Sep 17 00:00:00 2001
+From: Matthias Reichl <hias@horus.com>
+Date: Wed, 13 Nov 2024 00:16:47 +0100
+Subject: [PATCH 2/3] dts: bcm2711: drop numa_policy from bootargs
+
+We don't compile the kernel with NUMA so drop the numa parameter
+from bootargs.
+
+Signed-off-by: Matthias Reichl <hias@horus.com>
+---
+ arch/arm/boot/dts/broadcom/bcm2711-rpi-cm4s.dts | 2 +-
+ arch/arm/boot/dts/broadcom/bcm2711-rpi-ds.dtsi  | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/arch/arm/boot/dts/broadcom/bcm2711-rpi-cm4s.dts b/arch/arm/boot/dts/broadcom/bcm2711-rpi-cm4s.dts
+index 71d228414b76..c48a0880539d 100644
+--- a/arch/arm/boot/dts/broadcom/bcm2711-rpi-cm4s.dts
++++ b/arch/arm/boot/dts/broadcom/bcm2711-rpi-cm4s.dts
+@@ -148,7 +148,7 @@ soc {
+ 
+ / {
+ 	chosen {
+-		bootargs = "coherent_pool=1M snd_bcm2835.enable_headphones=0 cgroup_disable=memory numa_policy=interleave";
++		bootargs = "coherent_pool=1M snd_bcm2835.enable_headphones=0 cgroup_disable=memory";
+ 	};
+ 
+ 	aliases {
+diff --git a/arch/arm/boot/dts/broadcom/bcm2711-rpi-ds.dtsi b/arch/arm/boot/dts/broadcom/bcm2711-rpi-ds.dtsi
+index eb3abcdbae6b..32453b394ded 100644
+--- a/arch/arm/boot/dts/broadcom/bcm2711-rpi-ds.dtsi
++++ b/arch/arm/boot/dts/broadcom/bcm2711-rpi-ds.dtsi
+@@ -3,7 +3,7 @@
+ 
+ / {
+ 	chosen {
+-		bootargs = "coherent_pool=1M 8250.nr_uarts=1 snd_bcm2835.enable_headphones=0 cgroup_disable=memory numa_policy=interleave";
++		bootargs = "coherent_pool=1M 8250.nr_uarts=1 snd_bcm2835.enable_headphones=0 cgroup_disable=memory";
+ 	};
+ 
+ 	__overrides__ {
+-- 
+2.39.5
+
