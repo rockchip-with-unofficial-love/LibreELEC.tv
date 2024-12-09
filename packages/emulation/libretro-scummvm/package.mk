@@ -7,7 +7,7 @@ PKG_SHA256="8b636d4a366962c381d8eeb5cc70f5fc598e9039eb2b89e4b006ea3c3f7969a9"
 PKG_LICENSE="GPLv3"
 PKG_SITE="https://github.com/libretro/scummvm"
 PKG_URL="https://github.com/libretro/scummvm/archive/${PKG_VERSION}.tar.gz"
-PKG_DEPENDS_TARGET="toolchain"
+PKG_DEPENDS_TARGET="toolchain faad2"
 PKG_LONGDESC="ScummVM with libretro backend."
 PKG_TOOLCHAIN="make"
 PKG_LR_UPDATE_TAG="yes"
@@ -20,6 +20,12 @@ PKG_MAKE_OPTS_TARGET="all"
 
 pre_make_target() {
   CXXFLAGS+=" -DHAVE_POSIX_MEMALIGN=1"
+
+  # use the system faad2
+  INCLUDES+="-I$(get_install_dir faad2)/usr/include"
+  LIBS+=" -L$(get_install_dir faad2)/usr/lib -lfaad"
+  export USE_SYSTEM_faad=1
+
   if [ "${DEVICE}" = "OdroidGoAdvance" ]; then
     PKG_MAKE_OPTS_TARGET+=" platform=oga_a35_neon_hardfloat"
   else
