@@ -59,13 +59,21 @@ PKG_CONFIGURE_OPTS_TARGET="--without-ada \
                            --disable-home-terminfo \
                            --disable-assertions \
                            --enable-leaks \
-                           --enable-sigwinch"
+                           --enable-sigwinch \
+                           --cache-file=config.cache"
 
 PKG_CONFIGURE_OPTS_HOST="--enable-termcap \
                          --with-termlib \
                          --with-shared \
                          --enable-pc-files \
                          --without-manpages"
+
+pre_configure_target() {
+  cat >config.cache <<EOF
+cf_cv_builtin_bool=1
+cf_cv_header_stdbool_h=1
+EOF
+}
 
 post_makeinstall_target() {
   local f
