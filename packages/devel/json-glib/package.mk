@@ -2,8 +2,8 @@
 # Copyright (C) 2021-present Team LibreELEC (https://libreelec.tv)
 
 PKG_NAME="json-glib"
-PKG_VERSION="1.10.0"
-PKG_SHA256="447890f9de2a04c312871768208f6c8aeec4069392af7605bc77e61165dcb374"
+PKG_VERSION="1.10.6"
+PKG_SHA256="d23cbd4094a32cc05cf22cd87a83da1f799e182e286133b49fde3c9241a32006"
 PKG_LICENSE="LGPL-2.1"
 PKG_SITE="https://github.com/GNOME/json-glib"
 PKG_URL="https://github.com/GNOME/json-glib/archive/${PKG_VERSION}.tar.gz"
