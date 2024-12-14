@@ -39,9 +39,9 @@ index 7b6c9811a6..6d9527ddd0 100644
  		test/test_tomllib/data \
  		test/test_tomllib/data/invalid \
 @@ -2232,7 +2230,6 @@ TESTSUBDIRS=	idlelib/idle_test \
- 		test/test_tomllib/data/valid/dates-and-times \
  		test/test_tomllib/data/valid/multiline-basic-str \
  		test/test_tools \
+ 		test/test_tools/i18n_data \
 -		test/test_ttk \
  		test/test_unittest \
  		test/test_unittest/testmock \

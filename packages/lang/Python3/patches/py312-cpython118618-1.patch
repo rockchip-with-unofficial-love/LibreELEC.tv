@@ -339,7 +339,7 @@ index 1337516aa59cbc..a25c3dcf9d09ea 100644
          PyMem_RawFree(interp);
      }
  }
-@@ -679,13 +685,6 @@ init_interpreter(PyInterpreterState *interp,
+@@ -679,14 +685,6 @@ init_interpreter(PyInterpreterState *interp,
      assert(next != NULL || (interp == runtime->interpreters.main));
      interp->next = next;
  
@@ -350,9 +350,10 @@ index 1337516aa59cbc..a25c3dcf9d09ea 100644
 -                _obmalloc_pools_INIT(interp->obmalloc.pools);
 -        memcpy(&interp->obmalloc.pools.used, temp, sizeof(temp));
 -    }
-     _PyObject_InitState(interp);
+-
+     // We would call _PyObject_InitState() at this point
+     // if interp->feature_flags were alredy set.
  
-     _PyEval_InitState(interp, pending_lock);
 diff --git a/Tools/c-analyzer/cpython/ignored.tsv b/Tools/c-analyzer/cpython/ignored.tsv
 index 9f36c47ca7ea03..7bcca27ecc32f6 100644
 --- a/Tools/c-analyzer/cpython/ignored.tsv

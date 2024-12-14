@@ -25,9 +25,9 @@ index fb833ba61cbd9b..31a24d4a65aebf 100644
      /* Auto-thread-state API */
      status = _PyGILState_Init(interp);
      if (_PyStatus_EXCEPTION(status)) {
-@@ -658,6 +651,13 @@ pycore_create_interpreter(_PyRuntimeState *runtime,
-         return status;
-     }
+@@ -662,6 +655,13 @@ pycore_create_interpreter(_PyRuntimeState *runtime,
+     // didn't depend on interp->feature_flags being set already.
+     _PyObject_InitState(interp);
  
 +    // initialize the interp->obmalloc state.  This must be done after
 +    // the settings are loaded (so that feature_flags are set) but before
@@ -39,7 +39,7 @@ index fb833ba61cbd9b..31a24d4a65aebf 100644
      PyThreadState *tstate = _PyThreadState_New(interp);
      if (tstate == NULL) {
          return _PyStatus_ERR("can't make first thread");
-@@ -2059,14 +2059,6 @@ new_interpreter(PyThreadState **tstate_p, const PyInterpreterConfig *config)
+@@ -2072,14 +2072,6 @@ new_interpreter(PyThreadState **tstate_p, const PyInterpreterConfig *config)
          return _PyStatus_OK();
      }
  
