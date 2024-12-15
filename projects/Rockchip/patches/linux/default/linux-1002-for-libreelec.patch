@@ -102,7 +102,7 @@ index 431c4ec198be..eec03adf0902 100644
 +		opp-500000000 {
 +			opp-hz = /bits/ 64 <500000000>;
 +			opp-microvolt = <1150000>;
-+			status = "disabled";
++			status = "okay";
 +		};
  	};
  
