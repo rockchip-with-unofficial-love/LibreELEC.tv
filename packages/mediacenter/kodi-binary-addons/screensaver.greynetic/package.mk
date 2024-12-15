@@ -5,7 +5,7 @@
 PKG_NAME="screensaver.greynetic"
 PKG_VERSION="22.0.2-Piers"
 PKG_SHA256="f8e6f772e40ad5cfb3493011fbae6062d7f3ab0c03f614842687505af2194da3"
-PKG_REV="1"
+PKG_REV="2"
 PKG_ARCH="any"
 PKG_LICENSE="GPL"
 PKG_SITE="https://github.com/xbmc/screensaver.greynetic"
