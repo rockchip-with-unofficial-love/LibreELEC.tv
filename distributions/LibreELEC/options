@@ -236,7 +236,7 @@
   REMOTE_SUPPORT="yes"
 
 # IR remote keymaps supported in default config
-  IR_REMOTE_KEYMAPS="rc6_mce xbox_360 xbox_one"
+  IR_REMOTE_KEYMAPS="rc6_mce xbox_360 xbox_one x96max tanix_tx5max mecool_kii_pro t95d mxq4k"
 
 # build and install Joystick support (yes / no)
   JOYSTICK_SUPPORT="yes"
